@@ -19,8 +19,9 @@ def get_japanese_emoticon(path, emoticon)
   translator =load_library(path)
   jap_emo = translator["get_emoticon"][emoticon]
   if jap_emo == nil
-    
-  
+     return "Sorry, that emoticon was not found"
+  end
+  return jap_emo
 end
 
 def get_english_meaning
